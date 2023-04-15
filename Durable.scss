@@ -617,7 +617,7 @@ header{
 
 
 /*Query for mobile phones */
-@media (min-width: 481px) and (max-width: 768px) {
+@media screen(min-width: 481px) and (max-width: 768px) {
   body {
     font-size: 14px;
     width:100%;
@@ -761,7 +761,7 @@ header{
 
 
 /*Query for smallphones */
-@media (min-width: 300px) and (max-width: 480px) {
+@media screen(min-width: 50px) and (max-width: 480px) {
   body {
     font-size: 14px;
     width:100%;
