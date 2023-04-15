@@ -625,19 +625,19 @@ header{
   #online{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
   }
   .head-project{
     margin-left: 5%;
   }
   .projects{
-    width: 100%;
+    width: 100vw;
     padding-left: 5%;
     padding-right: 5%;
     
   }
   .gallery-container{
-    width: 100%;
+    width: 100vw;
     padding-left: 5%;
     padding-right: 5%;
     img{
@@ -726,7 +726,7 @@ header{
     
     margin-top: 5vh;
     align-items: center;
-    width: 90vw;
+    width: 85vw;
     justify-items: center;
     gap: 2vh;
     h1{
