@@ -763,48 +763,135 @@ header{
 /*Query for smallphones */
 @media (max-width: 480px) {
   body {
+    font-size: 14px;
     width:100%;
-    font-size: 8px;
-    overflow-x:hidden;
   }
- .projects{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100vw;
-  padding-left: 5%;
-  padding-left: 5vw;
-} 
-  .slide1 {
-    background-size: contain;
-    background-position: center;
-    height:70vh;
-    width:100vw;
-    padding-top: 8vh;
-    margin-top: 16%;
-    gap:5vh;
+  #online{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  .background-image {
-    height:80vh;
-    width:100vw;
-    padding-top: 16vh;
+  .head-project{
+    margin-left: 5%;
   }
-  header{
-     height: 15vh;
-     img{
-      width: 6.5vw;
-      height: 6vh;
-      margin-left: 1vw;
-      margin-top:3.5vh;
+  .projects{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+  }
+  .gallery-container{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    img{
+      width: 80%;
+      
     }
   }
-  .content{
+  .gallery-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .gallery-list li {
+    margin-right: 10px;
+  }
+  
+  .gallery-list li:last-child {
+    margin-right: 0;
+  }
+  
+  .gallery-list img {
+    min-width: 100%;
+    height: 200px;
+    cursor: pointer;
+  }
+    .slide1 {
+      background-size: cover;
+      background-position: center;
+      height:70%;
+      width:100%;
+      padding-top: 6vh;
+      margin-top: 18vh;
+      gap:7px;
+      
+    }
+ .office{
+  width: 100%;
+  .About{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    img{
+      float: left;
+      width: 90%;
+    }
+    .text{
+      float: left;
+      width: 45%
+    }
+  }
+  .slide2{
+    width:90%;
     h1{
-       font-size: 2.2em; 
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+   }
+  
+}
+.fit{
+      width:100%;
+    }
+
+  a{
+      @include links();
+      width: 100%;
+      padding-left: 27%;
+      float: left;
+      }
+ }
+      .office::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 0, 0, 0.68); 
+      }  
+  .content{ 
+    
+    margin-top: 5vh;
+    align-items: center;
+    width: 90vw;
+    justify-items: center;
+    gap: 2vh;
+    h1{
+       font-size: 3.2em; 
     }
     p{
-      font-size:0.8em;
+      font-size: 14.8px;
     }
+    
+ 
+  .contact{
+    height:30vh;
+    padding-top: 5vh;
   }
+    .form{ 
+    
+      display: block;
+      input{
+        width:100%;
+
+      }
+    }
 }
   
