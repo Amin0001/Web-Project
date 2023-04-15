@@ -465,6 +465,11 @@ figcaption {
 @media (min-width: 769px) and (max-width: 991px) {
   body {
     font-size: 14px;
+    zoom: 1;
+  }
+  html {
+    touch-action: manipulation;
+    user-zoom: no;
   }
   #online {
     display: flex;
@@ -707,10 +712,15 @@ figcaption {
 }
 
 /*Query for smallphones */
-@media (min-width: 300px) and (max-width: 480px) {
+@media (min-width: 50px) and (max-width: 480px) {
   body {
     font-size: 14px;
     width: 100%;
+    zoom: 1;
+  }
+  html {
+    touch-action: manipulation;
+    user-zoom: no;
   }
   #online {
     display: flex;
@@ -807,10 +817,20 @@ figcaption {
   background-color: rgba(10, 0, 0, 0.68);
 }
 
+.bold {
+  font-size: 0.5em;
+  color: black;
+  width: 60vw;
+  padding-left: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
 .content {
-  margin-top: 5vh;
+  margin-top: 3vh;
   align-items: center;
   width: 90vw;
+  margin-left: 3%;
   justify-items: center;
   gap: 2vh;
 }
