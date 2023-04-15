@@ -770,6 +770,7 @@ header{
     font-size: 14px;
     width:100%;
     zoom: 1;
+    overflow-x: hidden;
   }
   html {
     touch-action: manipulation;
@@ -798,6 +799,9 @@ header{
       width: 80%;
       
     }
+  }
+  header{
+    positon: fixed;
   }
   .gallery-list {
     display: flex;
