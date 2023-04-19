@@ -716,12 +716,7 @@ header{
       width:100%;
     }
 
-  a{
-      @include links();
-      width: 100%;
-      padding-left: 27%;
-      float: left;
-      }
+ 
  }
       .office::before {
         content: "";
