@@ -76,8 +76,8 @@ header img {
 
 .sidebar {
   position: fixed;
-  width: 250px;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: white;
 }
 
@@ -99,7 +99,7 @@ header img {
   line-height: 65px;
   font-size: 20px;
   color: gray;
-  padding-left: 40px;
+  padding-left: 15px;
   box-sizing: border-box;
   text-decoration: none;
 }
@@ -143,10 +143,8 @@ header img {
   margin-right: 5%;
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  background-color: #ccc;
+.form .input {
+  background-color: white;
 }
 
 .form a {
@@ -191,6 +189,7 @@ form textarea {
   text-decoration: none;
   padding: 10px;
   width: 100%;
+  text-align: center;
 }
 
 .office::before {
@@ -270,9 +269,12 @@ figcaption {
   font-size: 18px;
   color: black;
   width: 60vw;
-  padding-left: 5%;
-  justify-content: center;
-  align-items: center;
+}
+
+.swiper-container .bold .speaker {
+  color: #554747;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
 }
 
 .swiper-container .swipper-nav {
@@ -284,17 +286,13 @@ figcaption {
   color: black;
 }
 
-.swiper-container .speaker {
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-  padding-left: 5%;
-}
-
 .swiper-container .swiper-slide {
   width: 100%;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* for laptops and large screen */
@@ -854,4 +852,20 @@ figcaption {
 
 .content .form input {
   width: 100%;
+}
+
+.gallery-list img {
+  transition: all 0.5s ease-in-out;
+}
+
+.gallery-list img:hover {
+  transform: scale(1.2);
+}
+
+.gallery-list img.zoom-out {
+  transform: scale(0.5);
+}
+
+.gallery-list img.zoom-in {
+  transform: scale(1);
 }

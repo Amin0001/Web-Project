@@ -16,8 +16,8 @@
 <body>
   <div class="slide1">
     <header class="row items-center">
-        <div class="col-md-6">
-            <img src="logo.png" style="width:50px; height:50px;" alt="logo">
+        <div class="col-md-6 side">
+          <a href="Durable.html"><img src="logo.png" style="width:50px; height:50px;" alt="logo"></a>
         </div>
         
           <div class="col-md-6 container" id="container">
@@ -26,12 +26,12 @@
                 <img src="cancel.png"  style="width:26px; height:26px;" id="cancel" alt="cancel">
                 
                 <ul>
-                    
+                    <li><a  href="Durable.html">Home</a></li>
                     <li><a href="About_Us.html">About Us</a></li>
                     <li><a href="Services.html">Services</a></li> 
                     <li><a href="">Project</a></li>  
                     <li><a href="Growth_Now.html">Growth Now</a></li>
-                    <a  href="Durable.html"><i style="color: rgb(14, 11, 11);" class="fa-solid fa-house"></i></a> 
+                     
                                  
         
                    
@@ -182,7 +182,7 @@
             <div class="col-6" id="online">  
               <div class="info">
                 <label>Name</label><br>
-                <input clgass="input" type="text" name="Name" /><br>
+                <input class="input" type="text" name="Name" /><br>
               </div>  
               <div class="info"> 
                 <label>E-mail</label><br>
@@ -253,6 +253,16 @@ Show.addEventListener('click', Display);
 Hide.addEventListener('click', Hidden);
 
 
+const images = document.querySelectorAll(".gallery-list img");
+
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    image.classList.add("zoom-out");
+  });
+  image.addEventListener('dblclick', () => {
+    image.classList.remove("zoom-out");
+  });
+});
 
        
 </script>

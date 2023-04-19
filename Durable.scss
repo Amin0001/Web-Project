@@ -78,8 +78,8 @@ header{
     //For the side menu bar
     .sidebar{
       position: fixed;
-      width: 250px;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       background-color: white;
       img{
           float: right;
@@ -96,7 +96,7 @@ header{
                   line-height: 65px;
                   font-size: 20px;
                   color: gray;
-                  padding-left: 40px;
+                  padding-left: 15px;
                   box-sizing: border-box;
                   text-decoration: none;
                   i{
@@ -136,13 +136,11 @@ header{
   margin-left: 5%;
   margin-right: 5%
  }   
- form input[type="text"],
-form input[type="email"],
-form textarea {
-  background-color: #ccc;
-}
+ 
  .form{
-  
+  .input{
+    background-color: white;
+  }
   a{
     @include links();
     
@@ -186,6 +184,7 @@ form textarea {
       @include links();
       padding: 10px;
       width:100%;
+      text-align: center;
     }
  
 }
@@ -255,9 +254,13 @@ figcaption{
   font-size:18px;
   color: black;
   width:60vw;
-  padding-left: 5%;
-  justify-content: center;
-  align-items: center;
+  
+ .speaker{
+  color: rgb(85, 71, 71);
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
+  
+}
 }
 .swipper-nav{
   color: black;
@@ -266,16 +269,14 @@ figcaption{
 .swiper-pagination{
   color: black;
 }
-.speaker{
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-  padding-left: 5%;
-}
+
  .swiper-slide{
   width: 100%;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
  }
 }
 
@@ -313,6 +314,7 @@ figcaption{
   }
   #cancel{
     display: none;
+    
   }
   .items-center{
     display: flex;
@@ -770,7 +772,6 @@ header{
     font-size: 14px;
     width:100%;
     zoom: 1;
-    overflow-x: hidden;
   }
   html {
     touch-action: manipulation;
@@ -799,9 +800,6 @@ header{
       width: 80%;
       
     }
-  }
-  header{
-    positon: fixed;
   }
   .gallery-list {
     display: flex;
@@ -918,4 +916,18 @@ header{
       }
     }
 }
-  
+.gallery-list img{
+  transition: all 0.5s ease-in-out;
+}  
+
+.gallery-list img:hover {
+  transform: scale(1.2);
+}
+
+.gallery-list img.zoom-out {
+  transform: scale(0.5);
+}
+
+.gallery-list img.zoom-in {
+  transform: scale(1);
+}

@@ -17,23 +17,21 @@
   <div class="slide1">
     <header class="row items-center">
         <div class="col-md-6">
-            <img src="logo.png" style="width:50px; height:50px;" alt="logo">
+            <a href="Durable.html"><img src="logo.png" style="width:50px; height:50px;" alt="logo"></a>
         </div>
         
           <div class="col-md-6 container" id="container">
     
             <div class="main-menu" id="side-bar">
-                <img src="cancel.png"  style="width:26px; height:26px;" id="cancel" alt="cancel">
+                <img src="cancel.png"  style="width:26px; height:26px; margin-right: 30px;" id="cancel" alt="cancel">
                 
                 <ul>
-                    
+                    <li><a  href="Durable.html">Home</a></li>
                     <li><a href="About_Us.html">About Us</a></li>
                     <li><a href="Services.html">Services</a></li> 
                     <li><a href="">Project</a></li>  
                     <li><a href="Growth_Now.html">Growth Now</a></li>
-                    <a  href="Durable.html"><i style="color: rgb(14, 11, 11);" class="fa-solid fa-house"></i></a> 
-                                 
-        
+                    
                    
                 </ul>
             </div>
@@ -51,7 +49,7 @@
             and drive sustainable success through<br> unmatched creativity and foolproofed
             strategies.
         </p>
-        <a class="button-primary" href="tel:+2348037879722" style="background: rgb(181, 0, 0); border-radius: 8px; color: rgb(255, 255, 255); border: 2px solid rgb(181, 0, 0);">Book a Growth call now</a>
+        <a class="button-primary" href="tel:+2348037879722" style="background: rgb(181, 0, 0); border-radius: 8px; color: rgb(255, 255, 255); border: 2px solid rgb(181, 0, 0);">Growth call now</a>
       </div>  
     </div>
   </div>
@@ -132,8 +130,9 @@
                deep knowledge and experience which has been invaluable in taking our<br>
                business to the next level. 
                Highly recommended! 
-             </span >
-             <span class="speaker">Head of Digital, R.T Briscoe</span>
+              <br><span class="speaker">Head of Digital, R.T Briscoe</span>
+              </span >
+             
           </div>
           <div class="swiper-slide">
             <span class="bold">
@@ -141,8 +140,9 @@
               cares about your business and the ROI 
               on your marketing budget, you will
               never be wrong with The Bond.
+             <br> <span class="speaker">Neil Cheng, Head of Marketing Egatee</span>
             </span>
-            <span class="speaker">Neil Cheng, Head of Marketing Egatee</span>
+            
           </div>
           <div class="swiper-slide">
             <span class="bold">
@@ -153,10 +153,11 @@
               I got from them and would recommend
               them to any business looking for
               growth.
-            </span>
-            <span class="speaker">
+            <br><span class="speaker">
               Glory Nduka -Dexter Travels
             </span>
+            </span>
+            
           </div>
         </div>
          
@@ -182,7 +183,7 @@
             <div class="col-6" id="online">  
               <div class="info">
                 <label>Name</label><br>
-                <input clgass="input" type="text" name="Name" /><br>
+                <input class="input" type="text" name="Name" /><br>
               </div>  
               <div class="info"> 
                 <label>E-mail</label><br>
@@ -216,10 +217,23 @@
         <i class="fa-brands fa-twitter"></i> 
        </div>
   </div>
-  <script src="https://unpkg.com/medium-zoom"></script>
+ 
   <script>
-   
-  var mySwiper = new Swiper('.swiper-container', {
+const Show = document.getElementById('show');
+const Hide = document.getElementById('cancel');
+const menu = document.getElementById('side-bar');
+const Wrapper = document.body.innerHTML
+function Display(){
+  menu.classList.add('sidebar');
+  menu.classList.remove('main-menu');
+}
+function Hidden(){
+ menu.classList.add('main-menu');
+ menu.classList.remove('sidebar');
+}
+Show.addEventListener('click', Display);
+Hide.addEventListener('click', Hidden);   
+var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -237,20 +251,17 @@
     prevEl: '.swiper-button-prev',
   },
 })
-const Show = document.getElementById('show');
-const Hide = document.getElementById('cancel');
-const menu = document.getElementById('side-bar');
-const Wrapper = document.body.innerHTML
-function Display(){
-  menu.classList.add('sidebar');
-  menu.classList.remove('main-menu');
-}
-function Hidden(){
- menu.classList.add('main-menu');
- menu.classList.remove('sidebar');
-}
-Show.addEventListener('click', Display);
-Hide.addEventListener('click', Hidden);
+const images = document.querySelectorAll(".gallery-list img");
+
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    image.classList.add("zoom-out");
+  });
+  image.addEventListener('dblclick', () => {
+    image.classList.remove("zoom-out");
+  });
+});
+
 
 
 
